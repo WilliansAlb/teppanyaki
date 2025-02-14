@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Teppanyaki 鉄板焼き</title>
+	<link rel="icon" href="img/logoTeppanyaki.svg" sizes="any" type="image/svg+xml">
+	<style>
+		@import url('https://fonts.googleapis.com/css2?family=Kosugi&family=Shippori+Mincho:wght@400;500;600;700;800&display=swap');
+
+		html,
+		body,
+		div,
+		span,
+		applet,
+		object,
+		iframe,
+		h1,
+		h2,
+		h3,
+		h4,
+		h5,
+		h6,
+		p,
+		blockquote,
+		pre,
+		a,
+		abbr,
+		acronym,
+		address,
+		big,
+		cite,
+		code,
+		del,
+		dfn,
+		em,
+		img,
+		ins,
+		kbd,
+		q,
+		s,
+		samp,
+		small,
+		strike,
+		strong,
+		sub,
+		sup,
+		tt,
+		var,
+		b,
+		u,
+		i,
+		center,
+		dl,
+		dt,
+		dd,
+		ol,
+		ul,
+		li,
+		fieldset,
+		form,
+		label,
+		legend,
+		table,
+		caption,
+		tbody,
+		tfoot,
+		thead,
+		tr,
+		th,
+		td,
+		article,
+		aside,
+		canvas,
+		details,
+		embed,
+		figure,
+		figcaption,
+		footer,
+		header,
+		hgroup,
+		menu,
+		nav,
+		output,
+		ruby,
+		section,
+		summary,
+		time,
+		mark,
+		audio,
+		video {
+			margin: 0;
+			padding: 0;
+			border: 0;
+			font-size: 100%;
+			font: inherit;
+			vertical-align: baseline;
+		}
+
+		/* HTML5 display-role reset for older browsers */
+		article,
+		aside,
+		details,
+		figcaption,
+		figure,
+		footer,
+		header,
+		hgroup,
+		menu,
+		nav,
+		section {
+			display: block;
+		}
+
+		body {
+			line-height: 1;
+		}
+
+		ol,
+		ul {
+			list-style: none;
+		}
+
+		blockquote,
+		q {
+			quotes: none;
+		}
+
+		blockquote:before,
+		blockquote:after,
+		q:before,
+		q:after {
+			content: '';
+			content: none;
+		}
+
+		table {
+			border-collapse: collapse;
+			border-spacing: 0;
+		}
+
+		.background {
+			position: relative;
+			background-color: #a4a6a8;
+			width: 100vw;
+			height: 100vh;
+			overflow: hidden;
+		}
+
+		.svg {
+			position: absolute;
+			opacity: 0;
+			visibility: hidden;
+			display: none !important;
+			transition: opacity 0.5s ease-in-out, visibility 0s linear 0.5s;
+		}
+
+		.active {
+			display: block !important;
+			opacity: 1;
+			visibility: visible;
+			transition: opacity 0.5s ease-in-out, visibility 0s linear 0s;
+		}
+
+		#background-svg {
+			bottom: -25vh;
+			height: 100vh;
+			width: 150vw;
+			left: -25vw;
+			display: none;
+			animation: enterBackground 3s ease-in;
+		}
+
+		#sun-svg {
+			bottom: 65vh;
+			left: 37vw;
+			width: 26vw;
+			display: none;
+			animation: enterSun 2.5s ease-in;
+		}
+
+		#arc-svg {
+			bottom: 0;
+			width: 90vw;
+			left: 5vw;
+			max-height: 60vh;
+			display: none;
+			animation: enterArc 0.5s ease-in;
+		}
+
+		#mountain-svg {
+			bottom: 0;
+			width: 110vw;
+			left: -7vw;
+			max-height: 50vh;
+			display: none;
+			animation: enterMountain 1.5s ease-in;
+		}
+
+		#svg3 {
+			bottom: 25vh;
+			width: 35vw;
+			display: none;
+			animation: enter 2s ease-in;
+		}
+
+		#svg4 {
+			bottom: 30vh;
+			width: 35vw;
+			right: 0;
+			display: none;
+			animation: enter 2s ease-in;
+		}
+
+		#svg1 {
+			bottom: 50vh;
+			width: 45vw;
+			left: 10vw;
+			display: none;
+			animation: enter 1s ease-in;
+		}
+
+		#svg2 {
+			bottom: 60vh;
+			width: 45vw;
+			right: 10vw;
+			animation: enter 1s ease-in;
+		}
+
+		.kosugi-regular {
+			font-family: "Kosugi", serif;
+			font-weight: 400;
+			font-style: normal;
+		}
+
+		.shippori-mincho-regular {
+			font-family: "Shippori Mincho", serif;
+			font-weight: 400;
+			font-style: normal;
+		}
+
+		.shippori-mincho-medium {
+			font-family: "Shippori Mincho", serif;
+			font-weight: 500;
+			font-style: normal;
+		}
+
+		.shippori-mincho-semibold {
+			font-family: "Shippori Mincho", serif;
+			font-weight: 600;
+			font-style: normal;
+		}
+
+		.shippori-mincho-bold {
+			font-family: "Shippori Mincho", serif;
+			font-weight: 700;
+			font-style: normal;
+		}
+
+		.shippori-mincho-extrabold {
+			font-family: "Shippori Mincho", serif;
+			font-weight: 800;
+			font-style: normal;
+		}
+
+
+		#data h1 {
+			text-align: center;
+			font-size: 2em;
+		}
+
+		#data h2 {
+			text-align: center;
+			font-size: 1em;
+			opacity: 0.5;
+		}
+
+		@keyframes enterBackground {
+			0% {
+				transform: scale(5);
+			}
+
+			100% {
+				transform: scale(1);
+			}
+		}
+
+		@keyframes enter {
+			0% {
+				transform: scale(3);
+				opacity: 0;
+			}
+
+			100% {
+				transform: scale(1);
+				opacity: 1;
+			}
+		}
+
+		@keyframes enterArc {
+			0% {
+				transform: scale(7);
+				opacity: 0;
+			}
+
+			100% {
+				transform: scale(1);
+				opacity: 1;
+			}
+		}
+
+		@keyframes enterMountain {
+			0% {
+				transform: scale(3) translateY(200%);
+				opacity: 1;
+			}
+
+			100% {
+				transform: scale(1) translateY(0%);
+				opacity: 1;
+			}
+		}
+
+		@keyframes enterSun {
+			0% {
+				transform: scale(3) translateY(-100%);
+				opacity: 1;
+			}
+
+			100% {
+				transform: scale(1) translateY(0%);
+				opacity: 1;
+			}
+		}
+
+		.absolute-div {
+			position: absolute;
+			top: 0;
+			width: 100%;
+			height: 100%;
+			display: flex;
+			justify-content: center;
+			align-items: flex-start;
+		}
+
+		.flex-div{
+			padding: 1em;
+			background-color: white;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="background">
+		<img id="background-svg" class="svg" src="img/tepanyaky_background.svg" id="background" alt="" srcset="">
+		<img id="sun-svg" class="svg" src="img/tepanyaky_sun.svg" alt="">
+		<img id="svg3" class="svg" src="img/tepanyaky_thridCloud.svg" alt="">
+		<img id="svg4" class="svg" src="img/tepanyaky_fourthCloud.svg" alt="">
+		<img id="mountain-svg" class="svg" src="img/tepanyaky_mountain.svg" alt="">
+		<img id="svg2" class="svg" src="img/tepanyaky_secondCloud.svg" alt="">
+		<img id="svg1" class="svg" src="img/tepanyaky_firstCloud.svg" alt="">
+		<img id="arc-svg" class="svg" src="img/tepanyaky_arc.svg" alt="">
+	</div>
+	<div class="absolute-div">
+		<div class="flex-div">
+			<img src="img/logoTeppanyaki.svg" alt="">
+			<div id="data">
+				<h1 class="kosugi-regular">TEPPANYAKI</h1>
+				<h2 class="kosugi-regular">SUSHIROLL</h2>
+			</div>
+		</div>
+	</div>
+	<script>
+		var sleepES5 = function (ms) {
+			var esperarHasta = new Date().getTime() + ms;
+			while (new Date().getTime() < esperarHasta) continue;
+		};
+		const svgs = document.querySelectorAll(".svg");
+		let index = 0;
+
+		function showNextSVG() {
+			svgs[0].classList.add("active");
+			setTimeout(() => {
+				svgs[1].classList.add("active");
+				setTimeout(() => {
+					svgs[2].classList.add("active");
+					svgs[3].classList.add("active");
+					setTimeout(() => {
+						svgs[4].classList.add("active");
+						setTimeout(() => {
+							svgs[5].classList.add("active");
+							svgs[6].classList.add("active");
+							setTimeout(() => {
+								svgs[7].classList.add("active");
+							}, 500)
+						}, 500)
+					}, 500)
+				}, 500)
+			}, 500)
+		}
+
+		showNextSVG();
+
+	</script>
+</body>
+
+</html>
