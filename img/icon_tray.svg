@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="33mm"
+   height="33mm"
+   viewBox="0 0 33 33"
+   version="1.1"
+   id="svg5"
+   inkscape:version="1.1.2 (b8e25be833, 2022-02-05)"
+   sodipodi:docname="icon_tray.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#505050"
+     bordercolor="#ffffff"
+     borderopacity="1"
+     inkscape:pageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="1"
+     inkscape:document-units="mm"
+     showgrid="false"
+     inkscape:zoom="1.0053654"
+     inkscape:cx="127.3169"
+     inkscape:cy="295.91232"
+     inkscape:window-width="1920"
+     inkscape:window-height="991"
+     inkscape:window-x="-9"
+     inkscape:window-y="-9"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0" />
+  <defs
+     id="defs2">
+    <inkscape:path-effect
+       effect="bspline"
+       id="path-effect36735"
+       is_visible="true"
+       lpeversion="1"
+       weight="33.333333"
+       steps="2"
+       helper_size="0"
+       apply_no_weight="true"
+       apply_with_weight="true"
+       only_selected="false" />
+    <inkscape:path-effect
+       effect="bspline"
+       id="path-effect36613"
+       is_visible="true"
+       lpeversion="1"
+       weight="33.333333"
+       steps="2"
+       helper_size="0"
+       apply_no_weight="true"
+       apply_with_weight="true"
+       only_selected="false" />
+    <inkscape:path-effect
+       effect="bspline"
+       id="path-effect36735-3"
+       is_visible="true"
+       lpeversion="1"
+       weight="33.333333"
+       steps="2"
+       helper_size="0"
+       apply_no_weight="true"
+       apply_with_weight="true"
+       only_selected="false" />
+  </defs>
+  <g
+     inkscape:label="Capa 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     style="display:inline"
+     transform="translate(-13.804255,-18.545331)">
+    <path
+       style="fill:#000000;stroke-width:0.0794764"
+       d="m 18.245226,49.294406 -0.570353,-0.77192 6.312531,-0.0203 c 3.47189,-0.0112 9.152871,-0.0112 12.624404,0 l 6.311873,0.0203 -0.569699,0.77361 -0.569698,0.7736 -11.484352,-0.002 -11.484352,-0.002 -0.570354,-0.77192 z m -3.347904,-2.02193 c -0.745717,-0.19326 -0.872356,-1.34636 -0.196496,-1.78921 0.201822,-0.13225 1.048372,-0.13984 15.595606,-0.13984 h 15.382199 l 0.247804,0.17676 c 0.512806,0.3658 0.569735,1.14417 0.113494,1.55186 -0.134524,0.12021 -0.324495,0.21852 -0.422159,0.21848 -0.09766,-4e-5 -6.999478,0.009 -15.337369,0.0199 -8.337891,0.011 -15.260276,-0.006 -15.383079,-0.0379 z m 1.280178,-4.65112 c 0.05066,-1.72302 0.20354,-2.63012 0.686641,-4.07422 1.446731,-4.32461 5.050388,-7.79326 9.40482,-9.05247 1.297039,-0.37507 2.073338,-0.4953 3.498394,-0.54178 2.156072,-0.0703 3.838064,0.21193 5.779034,0.96981 3.139447,1.22585 5.882352,3.73741 7.380266,6.7578 1.043592,2.1043 1.425933,3.65114 1.497889,6.06008 l 0.04333,1.45044 H 30.29961 16.131349 Z m 13.596229,-14.99614 c -0.318509,-0.13863 -0.637582,-0.5601 -0.706863,-0.93371 -0.07305,-0.39397 0.06543,-0.7751 0.399177,-1.09858 0.234786,-0.22756 0.343852,-0.27206 0.73366,-0.29934 0.381868,-0.0267 0.503334,-0.001 0.731743,0.15409 0.798711,0.54281 0.777834,1.64838 -0.03987,2.11154 -0.354906,0.20102 -0.753533,0.22456 -1.117847,0.066 z"
+       id="path74642"
+       sodipodi:nodetypes="cccccccccccssscssssssssssssscccssssccss" />
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="layer4"
+     inkscape:label="Capa 4"
+     transform="translate(-13.804255,-18.545331)"
+     style="display:inline" />
+  <g
+     inkscape:groupmode="layer"
+     id="layer2"
+     inkscape:label="Capa 2"
+     style="display:none"
+     transform="translate(-13.804255,-18.545331)" />
+  <g
+     inkscape:groupmode="layer"
+     id="layer3"
+     inkscape:label="Capa 3"
+     style="display:none"
+     transform="translate(-13.804255,-18.545331)" />
+  <g
+     inkscape:groupmode="layer"
+     id="g36698"
+     inkscape:label="Capa 3 copia"
+     style="display:none"
+     transform="translate(-13.804255,-18.545331)" />
+</svg>
