@@ -152,10 +152,6 @@
 
 		.svg {
 			position: absolute;
-			opacity: 0;
-			visibility: hidden;
-			display: none !important;
-			transition: opacity 0.5s ease-in-out, visibility 0s linear 0.5s;
 		}
 
 		.active {
@@ -170,16 +166,12 @@
 			height: 100vh;
 			width: 150vw;
 			left: -25vw;
-			display: none;
-			animation: enterBackground 3s ease-in;
 		}
 
 		#sun-svg {
 			bottom: 65vh;
 			left: 37vw;
 			width: 26vw;
-			display: none;
-			animation: enterSun 2.5s ease-in;
 		}
 
 		#arc-svg {
@@ -187,8 +179,6 @@
 			width: 90vw;
 			left: 5vw;
 			max-height: 60vh;
-			display: none;
-			animation: enterArc 0.5s ease-in;
 		}
 
 		#mountain-svg {
@@ -196,38 +186,46 @@
 			width: 110vw;
 			left: -7vw;
 			max-height: 50vh;
-			display: none;
-			animation: enterMountain 1.5s ease-in;
 		}
 
 		#svg3 {
 			bottom: 25vh;
 			width: 35vw;
-			display: none;
-			animation: enter 2s ease-in;
 		}
 
 		#svg4 {
 			bottom: 30vh;
 			width: 35vw;
 			right: 0;
-			display: none;
-			animation: enter 2s ease-in;
 		}
+
+		#svg1 {
+			animation: moveClouds 35s linear infinite;
+		}
+
+		#svg2 {
+			animation: moveClouds 30s linear infinite;
+		}
+
+		#svg3 {
+			animation: moveClouds 50s linear infinite;
+		}
+
+		#svg4 {
+			animation: moveClouds 60s linear infinite;
+		}
+
 
 		#svg1 {
 			bottom: 50vh;
 			width: 45vw;
-			left: 10vw;
-			display: none;
-			animation: enter 1s ease-in;
+			left: 0;
 		}
 
 		#svg2 {
 			bottom: 60vh;
 			width: 45vw;
-			right: 10vw;
-			animation: enter 1s ease-in;
+			right: 0;
 		}
 
 		.kosugi-regular {
@@ -352,6 +350,7 @@
 			display: flex;
 			flex-direction: column;
 			justify-content: center;
+			align-items: center;
 		}
 
 		.banner-options {
@@ -372,17 +371,10 @@
 			from {
 				transform: scale(0.9) translateY(50px);
 			}
+
 			to {
 				transform: scale(1) translateY(0px);
 			}
-		}
-
-		.banner-options::before {
-			font-family: "Kosugi";
-			content: "¿Que quieres comer hoy?";
-			top: -2em;
-			font-size: 1.5em;
-			position: absolute;
 		}
 
 		.banner {
@@ -420,17 +412,39 @@
 			border-right: 5px whitesmoke solid;
 		}
 
+		td:nth-child(2) {
+			text-align: right;
+			font-family: "Shippori Mincho";
+		}
+
 		.banner:hover .frame {
 			filter: invert(83%) sepia(100%) saturate(500%) hue-rotate(10deg);
 		}
 
 		.icon-food {
-			width: 3vw;
-			height: 3vw;
+			width: 50px;
+			height: 50px;
 		}
 
 		.svg-real {
 			fill: black !important;
+		}
+
+		@keyframes moveClouds {
+			0% {
+				transform: translateX(-100%) translateY(0);
+				opacity: 0;
+			}
+
+			50% {
+				transform: translateX(0) translateY(10px);
+				opacity: 1;
+			}
+
+			100% {
+				transform: translateX(100%) translateY(0);
+				opacity: 0;
+			}
 		}
 	</style>
 </head>
@@ -448,11 +462,108 @@
 	</div>
 	<div class="absolute-div">
 		<div class="flex-div">
-			<img src="img/logoTeppanyaki.svg" alt="">
+			<img src="img/logoTeppanyaki.svg" width="30%" alt="">
 			<div id="data">
-				<h1 class="kosugi-regular">TEPPANYAKI</h1>
-				<h2 class="kosugi-regular">SUSHIROLL</h2>
+				<h1 class="kosugi-regular">Entradas</h1>
 			</div>
+			<table>
+				<tbody>
+					<tr>
+						<td>
+							PINCHOS DE CAMARÓN
+						</td>
+						<td>Q42.00
+						</td>
+					</tr>
+					<tr>
+						<td>
+							PINCHOS DE LOMITO
+						</td>
+						<td>
+							Q69.00
+						</td>
+					</tr>
+					<tr>
+						<td>
+							PINCHOS DE PULPO
+						</td>
+						<td>
+							Q49.00
+						</td>
+					</tr>
+					<tr>
+						<td>
+							PINCHOS DE POLLO
+						</td>
+						<td>
+							Q39.00
+						</td>
+					</tr>
+					<tr>
+						<td>
+							PINCHOS DE CERDO
+						</td>
+						<td>
+							Q39.00
+						</td>
+					</tr>
+					<tr>
+						<td>
+							ATÚN TOREADO, SEMIPICANTE
+						</td>
+						<td>
+							Q139.00
+						</td>
+					</tr>
+					<tr>
+						<td>
+							ATÚN TOREADO
+						</td>
+						<td>
+							Q139.00
+						</td>
+					</tr>
+					<tr>
+						<td>
+							ATÚN TOREADO
+						</td>
+						<td>
+							Q139.00
+						</td>
+					</tr>
+					<tr>
+						<td>
+							PULPO TOREADO, SEMIPICANTE
+						</td>
+						<td>
+							Q69.00
+						</td>
+					</tr>
+					<tr>
+						<td>
+							PULPO TOREADO
+						</td>
+						<td>
+							Q69.00
+						</td>
+					</tr>
+					<tr>
+						<td>
+							PULPO EN TEREYAKI
+						</td>
+						<td>
+							Q69.00
+						</td>
+					</tr>
+					<tr>
+						<td>
+							EDAMAMES
+						</td>
+						<td>
+							Q64.00</td>
+					</tr>
+				</tbody>
+			</table>
 		</div>
 		<div class="banner-options">
 			<div class="banner">
@@ -558,38 +669,6 @@
 			</div>
 		</div>
 	</div>
-	<script>
-		var sleepES5 = function (ms) {
-			var esperarHasta = new Date().getTime() + ms;
-			while (new Date().getTime() < esperarHasta) continue;
-		};
-		const svgs = document.querySelectorAll(".svg");
-		let index = 0;
-
-		function showNextSVG() {
-			svgs[0].classList.add("active");
-			setTimeout(() => {
-				svgs[1].classList.add("active");
-				setTimeout(() => {
-					svgs[2].classList.add("active");
-					svgs[3].classList.add("active");
-					setTimeout(() => {
-						svgs[4].classList.add("active");
-						setTimeout(() => {
-							svgs[5].classList.add("active");
-							svgs[6].classList.add("active");
-							setTimeout(() => {
-								svgs[7].classList.add("active");
-							}, 500)
-						}, 500)
-					}, 500)
-				}, 500)
-			}, 500)
-		}
-
-		showNextSVG();
-
-	</script>
 </body>
 
 </html>
